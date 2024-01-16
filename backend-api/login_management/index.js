@@ -1,0 +1,10 @@
+const express = require('express');
+const hpp = require('hpp');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const mongoose = require('mongoose');
+const app = express();
+require('../common/mongoosConfig')(mongoose);
+app.use(bodyParser.json());
+app.use(hpp());
+app.use(cors());
